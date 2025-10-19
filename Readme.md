@@ -10,7 +10,7 @@ In a hyperconnected world, every post, comment, or interaction contributes to bu
 
 This repository was born from a concrete question: **how can Generative AI be used to discover what is being said about a company and transform that information into relevant stories?** Stories that reflect real experiences and concerns, turning them into inspiring narratives that strengthen brand identity.
 
-![](brand-journalism-gemini/img/readme/1.google-search.png)
+![](img/readme/1.google-search.png)
 
 ---
 
