@@ -80,10 +80,6 @@ For this use case, we will use the Grounding with Google Search functionality, w
 
 ![Image description](img/readme/8-google-search.png)
 
----
-
-## Grounding with Google Search
-For this use case, we will use the Grounding with Google Search functionality, which connects the model directly to Google to perform searches and obtain up-to-date information.
 
 ### Main Advantages:
 * **📏Increased Accuracy:** Reduces model hallucinations by accessing verifiable information.
