@@ -1,0 +1,6 @@
+google-generativeai
+reportlab
+svglib
+matplotlib
+seaborn
+pandas

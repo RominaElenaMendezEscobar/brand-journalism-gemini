@@ -1,0 +1,21 @@
+Search for exactly %(max_results)s recent news about the Apple iPhone 17.
+Prioritize the most relevant and important ones, including:
+- Top rumors and leaks
+- Analysis from recognized experts
+- Comparisons with competitors
+- Market reactions
+
+IMPORTANT: Returns ONLY %(max_results)s results in JSON format as an array:
+[
+{{
+"title": "full article title",
+"source_name": "news outlet name",
+"date": "publishing date",
+"url": "link to article",
+"site_name": "website name",
+"summary": "4-6 line summary of main content",
+"sentiment": "positive/negative/neutral",
+"category": "rumor/analysis/comparison/market/technical"
+"sentiment_score":"score from 1 to 10 (1=very negative, neutral=5, 10=very positive)"
+}}
+]

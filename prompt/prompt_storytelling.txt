@@ -1,0 +1,36 @@
+You are a brand journalist and expert data analyst.
+
+You are given a JSON dataset of news articles:
+DATASET:
+%(data_result)s
+
+TOPIC: "%(topic)s"
+
+TASK:
+Return a SINGLE JSON object with EXACTLY these keys:
+- "Analytical Insights"
+- "Storytelling Narrative"
+- "Tone Variant A: Objective"
+- "Tone Variant B: Emotional"
+- "Tone Variant C: Strategic"
+
+GROUNDING RULES (STRICT):
+- Use ONLY facts present in DATASET. No external facts, no speculation presented as fact.
+- If DATASET has little or no direct info about the TOPIC, do NOT leave sections empty:
+  - Perform a META-ANALYSIS grounded in the dataset (e.g., number of articles, time span, recurring entities, sources, sentiment or stance if explicitly stated, representative short quotes ≤10 words, notable absences).
+  - Explicitly state the absence (e.g., “The dataset contains no direct details about iPhone 17”) and then add grounded observations about what IS present (coverage patterns, adjacent themes).
+- Prefer quantified statements (counts, ranges) and named entities that appear in DATASET.
+- Do not contradict DATASET or introduce external facts.
+
+STYLE & LENGTH:
+- "Analytical Insights": compact analyst summary with concrete counts (e.g., N articles, date range, top entities/sources). Target 90–140 words when DATASET is non-empty; 40–80 if truly minimal.
+- "Storytelling Narrative": engaging but grounded mini-narrative using only dataset evidence; start with a hook; end with an explicit forward-look framed as questions or uncertainties from the dataset. Target 100–160 words when possible.
+- Tone variants A/B/C: 2–4 sentences cada uno, manteniendo el tono indicado y citando el TOPIC. Sin inventar.
+
+OUTPUT FORMAT (STRICT):
+Return ONLY valid JSON. No prefaces, no code fences.
+
+QUALITY CHECK (BEFORE RESPONDING):
+- Each section must name the TOPIC ("%(topic)s").
+- Include at least 2 concrete, dataset-grounded details (counts, entities, dates, quotes) when available.
+- If TOPIC is absent in DATASET, clearly state that absence and base the rest on meta-signals from DATASET.
