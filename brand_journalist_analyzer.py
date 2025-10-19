@@ -25,27 +25,27 @@ class BrandJournalistAnalyzer:
         return storytelling_prompt
 
     def _clean_json_response(self, response_text: str) -> str:
-        """Elimina fences y deja solo el JSON."""
+        """Remove fences and leave only the JSON."""
         if not isinstance(response_text, str):
             return response_text
-        # si viene con ```json ... ```
+       # if it comes with ```json ... ```
         m = re.search(r"```(?:json)?\s*([\s\S]*?)```", response_text)
         if m:
             response_text = m.group(1)
-        # recorta espacios, quita líneas vacías duplicadas
+        # trim spaces, remove duplicate empty lines
         response_text = re.sub(r'\n\s*\n+', '\n', response_text).strip()
         return response_text
 
     def _parse_json_strict(self, text: str):
-        """Intenta json.loads con varias limpiezas suaves."""
+        """Try json.loads with several soft cleanups."""
         try:
             return json.loads(text)
         except Exception:
             cleaned = self._clean_json_response(text)
-            return json.loads(cleaned)  # si falla aquí, deja que suba la excepción
+            return json.loads(cleaned)  
 
     def _load_local_news(self, path="data/news_about_iphone.txt"):
-        """Carga artículos desde un JSON local (lista de dicts)."""
+        "Loads articles from a local JSON (list of dicts)."
         if not os.path.exists(path):
             raise FileNotFoundError(f"Local news file not found: {path}")
         with open(path, "r", encoding="utf-8") as f:
@@ -57,8 +57,8 @@ class BrandJournalistAnalyzer:
     
     def _load_or_search(self, path="data/news_about_iphone.txt", force_refresh=False, create_dataframe=True):
         """
-        Si existe el archivo local y no se fuerza refresh: lo carga.
-        Si no, ejecuta search_news y guarda el resultado en el archivo.
+        If the local file exists and a refresh isn't forced, load it.
+        If not, run search_news and save the result to the file.
         """
         if os.path.exists(path) and not force_refresh:
             print(f"📂 Loading cached news from {path}")
@@ -102,13 +102,12 @@ class BrandJournalistAnalyzer:
             contents=prompt,
             config={
                 "temperature": 0.4,
-                "response_mime_type": "application/json"  # <-- fuerza JSON
+                "response_mime_type": "application/json"  
             }
         )
         txt = response.candidates[0].content.parts[0].text
-        # parseo robusto
         storytelling_json = self._parse_json_strict(txt)
-        return storytelling_json  # <- dict listo para pasar al PDF
+        return storytelling_json  
         
     def get_conclusion(self, data_result):
         prompt = (
