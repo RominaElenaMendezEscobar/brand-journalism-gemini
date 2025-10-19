@@ -67,7 +67,7 @@ I have written a series of articles on the fundamentals of generative AI
 2. [GenAI Foundations – Chapter 2: Prompt Engineering in Action – Unlocking Better AI Responses](https://dev.to/r0mymendez/genai-foundations-chapter-2-prompt-engineering-in-action-unlocking-better-ai-responses-l28)
 3. [GenAI Foundations – Chapter 3: RAG Patterns and Best Practices](https://dev.to/r0mymendez/genai-foundations-chapter-3-rag-patterns-and-best-practices-cpc)
 4. [GenAI Foundations – Chapter 4: Model Customization & Evaluation – Can We Trust the Outputs?](https://dev.to/r0mymendez/genai-foundations-chapter-4-model-customization-evaluation-can-we-trust-the-outputs-i21)
-5. [GenAI Foundations – Chapter 5: Project Planning with the Generative AI Canvas] (https://dev.to/r0mymendez/genai-foundations-chapter-5-project-planning-with-the-generative-ai-canvas-2o73)
+5. [GenAI Foundations – Chapter 5: Project Planning with the Generative AI Canvas](https://dev.to/r0mymendez/genai-foundations-chapter-5-project-planning-with-the-generative-ai-canvas-2o73)
 
 ----
 
