@@ -73,7 +73,9 @@ I have written a series of articles on the fundamentals of generative AI
 
 ## Gemini
 **Gemini** is a family of multimodal AI models developed by Google DeepMind. It integrates into multiple Google products and can process text, images, and other data types simultaneously.
-Grounding with Google Search For this use case, we will use the Grounding with Google Search functionality, which connects the model directly to Google to perform searches and obtain up-to-date information.
+
+### Grounding with Google Search 
+For this use case, we will use the Grounding with Google Search functionality, which connects the model directly to Google to perform searches and obtain up-to-date information.
 
 
 ![Image description](img/readme/8-google-search.png)
